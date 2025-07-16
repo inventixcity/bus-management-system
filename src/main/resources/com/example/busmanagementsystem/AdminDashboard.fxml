@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.busmanagementsystem.Controller"
+            style="-fx-background-color: #f0f0f0;">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-background-color: linear-gradient(to right, #1565C0, #1976D2); -fx-padding: 15 25;">
+            <Label text="Admin Dashboard" style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;">
+                <font>
+                    <Font name="System Bold" size="28.0"/>
+                </font>
+            </Label>
+        </HBox>
+    </top>
+    <left>
+        <VBox spacing="10" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);" prefWidth="220">
+            <padding>
+                <Insets top="20" right="10" bottom="20" left="10"/>
+            </padding>
+            <Button text="Manage Buses" onAction="#handleManageBuses" prefWidth="200" prefHeight="40"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+            <Button text="View Reservations" onAction="#handleViewReservations" prefWidth="200" prefHeight="40"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+            <Button text="Logout" onAction="#handleLogout" prefWidth="200" prefHeight="40"
+                    style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+            <Button fx:id="backButton" text="Back" onAction="#handleBackButton" prefWidth="200" prefHeight="40"
+                    style="-fx-background-color: #FFA500; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 5;"/>
+        </VBox>
+    </left>
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-background-radius: 5;">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Label text="Welcome to Admin Dashboard" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333333;">
+                <font>
+                    <Font name="System Bold" size="24.0"/>
+                </font>
+            </Label>
+        </StackPane>
+    </center>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</BorderPane>

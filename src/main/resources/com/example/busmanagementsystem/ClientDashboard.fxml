@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.busmanagementsystem.ClientDashboardController"
+            prefHeight="600.0" prefWidth="800.0"
+            style="-fx-background-color: linear-gradient(to bottom right, #1a237e, #3949ab);">
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0"
+          style="-fx-padding: 20;">
+        <Label text="Client Dashboard"
+               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 1);"/>
+
+        <TableView fx:id="busTableView" VBox.vgrow="ALWAYS"
+                   style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 10);">
+            <columns>
+                <TableColumn fx:id="busIdColumn" text="Bus ID" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="routeColumn" text="Route" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="capacityColumn" text="Capacity" style="-fx-alignment: CENTER;"/>
+                <TableColumn fx:id="availableSeatsColumn" text="Available Seats" style="-fx-alignment: CENTER;"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="View Available Buses" onAction="#handleViewBuses"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-cursor: hand;"/>
+            <Button text="Make Reservation" onAction="#handleMakeReservation"
+                    style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-cursor: hand;"/>
+            <Button text="View My Reservations" onAction="#handleViewReservations"
+                    style="-fx-background-color: #FFC107; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-cursor: hand;"/>
+            <Button text="Back" onAction="#handleBackButton"
+                    style="-fx-background-color: #FFA500; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-cursor: hand;"/>
+            <Button text="Logout" onAction="#handleLogout"
+                    style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-cursor: hand;"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
